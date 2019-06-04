@@ -1,0 +1,335 @@
+@charset "UTF-8";
+/* -------------------------------------------- */
+/* ---- Hoja de Estilos personalizados CSS ---- */
+/* -------------------------------------------- */
+/* -------------------------------------------- 
+    GAMA DE COLORES
+--------------------------------------------- */
+/* -------------------------------------------- 
+1. GENERALES
+--------------------------------------------- */
+html {
+  font-size: 13px; }
+
+body {
+  font-family: 'Poiret One', cursive;
+  color: #44b673;
+  background-color: #f3ffef;
+  z-index: -2; }
+
+.font-montserrat {
+  font-family: 'Montserrat Alternates', sans-serif; }
+
+.font-josefin {
+  font-family: 'Josefin Sans', sans-serif; }
+
+.font-lato {
+  font-family: 'Lato', sans-serif; }
+
+.fa-2x {
+  vertical-align: middle;
+  padding-left: 0.2rem; }
+
+/* ----------------------------------------
+2.- ESTILOS COLOR PRINCIPAL
+-----------------------------------------*/
+.bg-primary {
+  background-color: #3cb96e !important; }
+
+.text-primary {
+  color: #3cb96e !important; }
+
+/* ----------------------------------------
+3.- ESTILOS COLOR SECUNDARIO
+-----------------------------------------*/
+.bg-secondary {
+  background-color: #68717e !important; }
+
+.text-secondary {
+  color: #68717e !important; }
+
+/* ----------------------------------------
+4.- ESTILOS FONDO
+-----------------------------------------*/
+.bg-light {
+  background-color: #d1e9ee !important; }
+
+/* ----------------------------------------
+5.- ESTILOS BOTONES
+-----------------------------------------*/
+/* HACE QUE EL SPAN SE MUESTRE CUANDO SE HACE HOVER SOBRE EL BOTÓN. EL BOTÓN DEBE DE USAR CLASE .btn-collapsible */
+.btn-collapsible {
+  overflow: hidden;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out; }
+  .btn-collapsible span {
+    opacity: 0;
+    text-indent: -20px;
+    display: inline-block;
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out; }
+  .btn-collapsible:hover {
+    max-width: 100%;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out; }
+    .btn-collapsible:hover span {
+      opacity: 1;
+      text-indent: 0px;
+      -webkit-transition: all 300ms ease-in-out;
+      transition: all 300ms ease-in-out; }
+
+.btn-propiedad {
+  font-size: 1.2rem;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 300 !important; }
+
+button:focus {
+  outline: none; }
+
+.btn {
+  border-radius: 2rem;
+  padding: 0.6rem 2rem;
+  font-weight: bold; }
+
+.btn-primary {
+  background-color: #3cb96e;
+  border-color: #3cb96e;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.btn-primary:hover {
+  color: #68717e;
+  background-color: white;
+  border-color: #3cb96e; }
+
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  color: #68717e !important;
+  background-color: #4ac47b !important;
+  border-color: #68717e !important; }
+
+.btn-primary:focus {
+  color: #68717e !important;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(60, 185, 110, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(60, 185, 110, 0.5) !important; }
+
+/* Insertar la flecha del botón principal */
+/* .btn-primary::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f138";
+    position: relative;
+    left: 0.6rem;
+    top: 0.1rem;
+    transition: left .3s ease
+} */
+/* .btn-primary:hover::after,
+.btn-primary:active::after,
+.btn-primary:focus::after{
+    left: 0.3rem;
+} */
+/* Insertar caja blanca del botón principal */
+.btn-primary::before {
+  content: "";
+  z-index: -1;
+  width: 0;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  -webkit-transform: skew(45deg);
+          transform: skew(45deg);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in; }
+
+.btn-primary:hover::before,
+.btn-primary:focus::before,
+.btn-primary:active::before {
+  left: -15%;
+  width: 130%; }
+
+/* -------------------------------------------- 
+6. NAVBAR
+--------------------------------------------- */
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: 300; }
+
+.navbar-brand .marca {
+  color: white; }
+
+.navbar-brand .ciudad {
+  font-weight: 900;
+  font-size: 2.3rem;
+  color: #ffc107; }
+
+/* GRADIENTE DE COLOR EN TEXTO */
+.navbar-dark .navbar-nav .nav-link {
+  background: -webkit-gradient(linear, left top, right top, from(#ffc107), to(#3cb96e));
+  background: linear-gradient(to right, #ffc107, #3cb96e);
+  -webkit-background-clip: text;
+  color: transparent; }
+
+.dropdown-menu {
+  background-color: #3cb96e; }
+
+.dropdown-menu .dropdown-item {
+  color: white; }
+
+.dropdown-menu .dropdown-item:hover {
+  color: black;
+  background-color: #ffc107; }
+
+#menu-navegacion .marca,
+#menu-navegacion .ciudad {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+
+#menu-navegacion a:hover .marca {
+  color: #ffc107; }
+#menu-navegacion a:hover .ciudad {
+  color: #f3ffef; }
+
+/* -------------------------------------------- 
+7. CAROUSEL
+--------------------------------------------- */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none; }
+
+.carousel-control-prev-icon::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f053';
+  font-size: 4rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffc107), to(#3cb96e));
+  background: linear-gradient(to bottom, #ffc107, #3cb96e);
+  -webkit-background-clip: text;
+  color: transparent; }
+
+.carousel-control-next-icon::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f054';
+  font-size: 4rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffc107), to(#3cb96e));
+  background: linear-gradient(to bottom, #ffc107, #3cb96e);
+  -webkit-background-clip: text;
+  color: transparent; }
+
+/* -------------------------------------------- 
+8. SECCIÓN ANUNCIOS
+--------------------------------------------- */
+.card {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem; }
+
+.card-img-top {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem; }
+
+.card ul li {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: bold; }
+
+/* -------------------------------------------- 
+9. SECCIÓN ENCUENTRA LA CASA DE TUS SUEÑOS
+--------------------------------------------- */
+#encuentra {
+  background-image: url(../images/contacto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+/* -------------------------------------------- 
+10. SECCIÓN NUESTRO BLOG
+--------------------------------------------- */
+.entrada h3::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 0.15rem;
+  background-color: #3cb96e;
+  margin-top: 0.5rem; }
+
+.meta span {
+  color: #ffc107;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400; }
+
+.entrada .descripcion-entrada {
+  color: #68717e; }
+
+/* -------------------------------------------- 
+11. SECCIÓN TESTIMONIALES
+--------------------------------------------- */
+.testimoniales {
+  background-color: #3cb96e;
+  border-radius: 1rem 3rem 0.5rem 5rem; }
+
+.testimoniales p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 2rem; }
+
+.testimoniales .persona {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.5rem; }
+
+.testimoniales .carousel-item {
+  padding-left: 3rem; }
+
+.testimoniales .testimonial-texto::before {
+  content: open-quote;
+  font-size: 8rem;
+  position: absolute;
+  left: 0;
+  top: 3.2rem; }
+
+/* -------------------------------------------- 
+12. SECCIÓN FOOTER
+--------------------------------------------- */
+footer .nav-link:hover {
+  color: #ffc107 !important; }
+
+/* ----------------------------------------
+x.- Media Queries
+-----------------------------------------*/
+@media (min-width: 768px) {
+  .barra.bg-success {
+    background-color: transparent !important; }
+
+  #encabezado {
+    position: relative; }
+
+  #encabezado .barra {
+    position: absolute;
+    z-index: 100;
+    width: 100%; }
+
+  .navbar-brand span {
+    color: #3cb96e; }
+
+  .navbar-brand .ciudad {
+    color: #3cb96e; }
+
+  #menu-navegacion a:hover .marca {
+    color: #3cb96e; }
+  #menu-navegacion a:hover .ciudad {
+    color: #ffc107; } }
+@media (min-width: 992px) {
+  html {
+    font-size: 16px; } }
+
+/*# sourceMappingURL=estilos.css.map */
